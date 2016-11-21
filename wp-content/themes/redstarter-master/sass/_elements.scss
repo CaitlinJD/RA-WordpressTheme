@@ -1,0 +1,169 @@
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+html {
+	box-sizing: border-box;
+	@include font-size(1);
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: $base__space-unit;
+}
+
+ul, ol {
+	margin: 0;
+	-webkit-margin-before: 0;
+	-webkit-padding-start: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 0;
+	list-style: none;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 $base__space-unit $base__space-unit;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	display: block;
+}
+
+table {
+	margin: 0 0 $base__space-unit;
+	width: 100%;
+}
+
+/* Links */
+a {
+	text-decoration: none;
+	color: $color__site-green;
+	&:hover {
+		color: $color_site-purple;
+	}
+}
+
+.full-header .menu-item a {
+	color: #fff;
+	&:hover {
+		color: #fff;
+	}
+}
+
+
+/* Link buttons */
+.site-content {
+  .button {
+    text-transform: uppercase;
+    padding: 0.8rem 1.4rem;
+  }
+  a.green-button {
+    color: #fff;
+    background-color: $color__site-green;
+    border: 1px solid $color__site-green;
+  }
+  a:hover.green-button {
+    color: #fff;
+    background-color: $color_site-purple;
+    border: 1px solid $color_site-purple;
+  }
+
+  a.white-button {
+    color: #fff;
+    border: 1px solid #fff;
+    &:hover {
+      color: #fff;
+      border: 1px solid #fff;
+    }
+  }
+
+  a.black-button {
+    color: #000;
+    border: 1px solid #000;
+    &:hover {
+      color: $color__site-green;
+      border: 1px solid $color__site-green;
+    }
+  }
+}
+
+
+
+i {
+	padding-right: 0.6rem;
+}
+
+/* Headings */
+
+h1, h2, h3 {
+	text-transform: uppercase;
+	color: $color_site-purple;
+
+}
+
+.read-article h2 {
+	color: #fff;
+}
+
+.three-and-four {
+	h2 {
+		font-size: 16px;
+		margin-bottom: 2rem;
+	}
+
+	.button {
+		font-size: 12px;
+	}
+}
+
+.site-footer {
+	h2.widgettitle {
+		color: $color_site-orange;
+	}
+}
+
+
+
+
+
+
+

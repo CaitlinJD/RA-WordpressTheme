@@ -102,5 +102,54 @@ Thumbs.db
 # track these mu-plugins, plugins, and themes
 # add your own entries here
 !wp-content/mu-plugins/example-mu-plugin/
-!wp-content/plugins/example-plugin/
-!wp-content/themes/example-theme/
+!wp-content/plugins/advanced-custom-fields/
+!wp-content/themes/redstarter-master/
+!wp-content/plugins/akismet/
+!wp-content/plugins/contact-form-7/
+!wp-content/plugins/easythumbnail-sizes/
+!wp-content/plugins/post-types/
+!wp-content/plugins/rest-api/
+!wp-content/plugins/WordPress-Plugin-Boilerplate-master/
+
+
+wp-content/themes/redstarter-master/node_modules/
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# Folders to ignore
+.hg
+.svn
+.CVS
+intermediate
+.idea
+cache
