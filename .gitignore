@@ -32,6 +32,7 @@ wp-content/*
 !wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
+!wp-content/database/
 
 # ignore all mu-plugins, plugins, and themes
 # unless explicitly whitelisted at the end of this file
@@ -57,7 +58,6 @@ Thumbs.db
 
 # ignore log files and databases
 *.log
-*.sql
 *.sqlite
 
 # ignore compiled files
