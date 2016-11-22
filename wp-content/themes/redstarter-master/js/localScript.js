@@ -3,7 +3,7 @@ console.log(monkey.rest_url);
 console.log(monkey.security_token);
 
 jQuery(document).ready(function($){
-
+    // Ajax call
     var url = monkey.rest_url;
     url += "wp/v2/posts";
     $.ajax({
@@ -23,37 +23,38 @@ jQuery(document).ready(function($){
     });
 
 
+    // site search function (showing and hiding elements)
+
+    // Header search bar
     $(".site-header").find("label").hide();
-    console.log("hello, this is javascript");
-
-    var finder = $(".page-404").find(".submit-search-page");
-    console.log(finder);
-
-    finder.hide();
-
-    var search = $(".page-404").find(".search-page");
-    $(".page-404").find("input").attr('placeholder', 'Type and hit enter...');
-    search.show();
-
-
-    $(".search-submit").on("click", function(e) {
-        //e.preventDefault();
-        //console.log("search label is: "+ $('#search').attr('value'));
-
+    $(".site-header").find(".search-submit").on("click", function(e) {
+    console.log("this is the search in the header");
         if ($(".site-header").find("label").is(":visible")) {
             if ($('#search').attr('value') == "") {
                 e.preventDefault();
                 $(".site-header").find("label").toggle();
-                search.show();
             }
         } else {
             e.preventDefault();
             $(".site-header").find("label").toggle();
-            search.show();
         }
+    })
 
 
+    // Search bar in page content
+    var finder = $(".page-404").find(".submit-search-page");
+    //console.log(finder);
+    finder.hide();
+    var search = $(".page-404").find(".search-page");
+    $(".page-404").find("input").attr('placeholder', 'Type and hit enter...');
+    search.show();
 
+    $(".page-404").find(".search-submit").on("click", function(e) {
+            var inputValue = $(".page-404").find("input").val();
+            console.log(inputValue);
+            if (inputValue == "") {
+                e.preventDefault();
+            }
     })
 
 })
