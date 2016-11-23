@@ -14,6 +14,40 @@ get_header(); ?>
 
             <?php get_template_part( 'template-parts/content', 'single' ); ?>
 
+            <?php if(wp_get_post_terms(get_the_ID(), 'journalcategory')) : ?>
+                <span>POSTED IN <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <span class="post-categories">
+                <?php
+                $categories = wp_get_post_terms(get_the_ID(), 'journalcategory');
+                if (!empty($categories)) {
+                    $cat_count = count($categories);
+                    $i = 1;
+                    foreach ($categories as $cat) {
+                        $name = $cat->name;
+                        echo (( $i != $cat_count )? $name.", " : $name );
+                        $i ++ ;
+                    }
+                }
+                ?>
+                    </span></span>
+            <?php endif; ?>
+
+            <?php if(wp_get_post_terms(get_the_ID(), 'journalcategory')) : ?>
+        <span>TAGGED <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <span class="post-tags">
+                <?php
+                $categories = wp_get_post_terms(get_the_ID(), 'journaltags');
+                if (!empty($categories)) {
+                    $cat_count = count($categories);
+                    $i = 1;
+                    foreach ($categories as $cat) {
+                        $name = $cat->name;
+                        echo (( $i != $cat_count )? $name." , " : $name );
+                        $i ++ ;
+                    }
+                }
+                ?>
+                </span></span>
+            <?php endif; ?>
+
 
             <?php
             // If comments are open or we have at least one comment, load up the comment template.

@@ -255,6 +255,12 @@
   }
 }
 
+.post-tags, .post-categories {
+  text-transform: uppercase;
+  color: $color__site-green;
+  margin-right: 2rem;
+}
+
 /* Shop Archive */
 
 .post-type-archive-product, .tax-productcategory {

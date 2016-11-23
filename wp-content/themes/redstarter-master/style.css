@@ -933,6 +933,11 @@ object {
 .post-type-archive-journal article, .single-journal article {
   margin-bottom: 3rem; }
 
+.post-tags, .post-categories {
+  text-transform: uppercase;
+  color: #248A83;
+  margin-right: 2rem; }
+
 /* Shop Archive */
 .post-type-archive-product .grey-border, .tax-productcategory .grey-border {
   padding: 0.5rem; }
