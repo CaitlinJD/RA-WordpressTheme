@@ -38,13 +38,16 @@
     <header class="entry-header">
         <?php if ( has_post_thumbnail() ) : ?>
             <?php the_post_thumbnail( 'rectangle-thumb' ); ?>
+
+            <?php else : ?>
+            <img src="<?php echo get_bloginfo('template_url') ?>/images/no_image_available.jpg">
         <?php endif; ?>
     </header><!-- .entry-header -->
 
     <div class="entry-meta grey-border">
         <?php red_starter_posted_on(); ?> <?php if (get_comments_number() != 0){ echo "/"; comments_number( '0 Comments', '1 Comment', '% Comments' ); } ?>
 
-        <?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+        <?php echo ( get_the_title() ? the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ) : "<a href=".get_permalink()." rel='bookmark'><h3>No title available</h3></a>"); ?>
 
         <a href="<?php the_permalink(); ?>" class="black-button button">Read entry</a>
 

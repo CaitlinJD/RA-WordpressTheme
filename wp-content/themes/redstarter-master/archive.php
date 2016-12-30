@@ -74,7 +74,8 @@ get_header(); ?>
 				</div>
 
 				<?php the_posts_navigation(); ?>
-
+			<?php elseif ( current_user_can('administrator') ) : ?>
+				<h2>You have no adventure posts. Install the REGISTER POST TYPES plugin to create adventure posts.</h2>
 			<?php else : ?>
 
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>

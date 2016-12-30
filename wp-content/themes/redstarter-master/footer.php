@@ -13,7 +13,13 @@
 				<div class="footer-content row">
 					<div class="site-info small-12 small-centered medium-12 medium-centered large-8 columns">
 						<div class="widget-list flex">
+							<?php if ( is_active_sidebar( 'footer-sidebar' ) ) : ?>
 							<?php dynamic_sidebar('footer-sidebar') ?>
+							<?php else : ?>
+								<?php if ( current_user_can('administrator') ) : ?>
+								<p>You have no content in the footer sidebar. Add widgets through dashboard.</p>
+								<?php endif; ?>
+							<?php endif; ?>
 						</div>
 					</div><!-- .site-info -->
 					<div class="footer-logo small-12 medium-12 large-4 columns">

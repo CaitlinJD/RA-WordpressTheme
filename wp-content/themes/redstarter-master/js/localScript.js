@@ -4,15 +4,16 @@ console.log(monkey.security_token);
 
 jQuery(document).ready(function($){
     // Ajax call
-    var url = monkey.rest_url;
-    url += "wp/v2/posts";
+    //var url = monkey.rest_url;
+   // url += "wp/v2/posts";
+    var url = "https://graph.facebook.com/v2.8/44589077752?fields=id%2Cname%2Cposts%7Bpicture%2Cstory%2Ccreated_time%2Cid%7D%2Cphotos&access_token=EAACEdEose0cBAJ0jHJneIcRYVeoHwYAo9ZCG4EzBY3qt0XtZCRAjjP2ivwBPvu5qkoBI5ZAujkGtx3lZBJzQVqtPMnlMx46HqvMvlUb5C5vNB7G0oh1ViU7G8SsikXDcpt9eJ9KnBTbtdZB8IIGx6by6dJLtbTRPZAVpWZCd6ZBhOAZDZD";
     $.ajax({
         url: url,
-        data: {
-          filter: {
-            'posts_per_page': 5
-          },
-        },
+        //data: {
+          //filter: {
+            //'posts_per_page': 5
+          //},
+        //},
         method: 'GET',
     }).done(function(result) {
         $(".loader").show();

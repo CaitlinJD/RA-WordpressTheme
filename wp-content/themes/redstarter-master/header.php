@@ -41,7 +41,9 @@
 
 						<nav id="site-navigation" class="main-navigation" role="navigation">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
-							<?php if ( has_nav_menu( 'primary' ) ){ wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); }?>
+							<?php echo ( has_nav_menu( 'primary' )? wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ) : (  current_user_can('administrator') ? "No menu items found in Primary Menu" : '' ) ); ?>
+
+							<?php //if ( has_nav_menu( 'primary' ) ){ wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); }?>
 							<?php echo get_search_form() ?>
 						</nav><!-- #site-navigation -->
 				<?php echo ( is_page_template('about.php') ? "</div>" : "" )?>
