@@ -160,6 +160,16 @@
 
 /* Front page */
 
+.home {
+  .columns {
+    margin-bottom: 1em;
+  }
+
+  .content-area {
+    border-bottom: none;
+  }
+}
+
 .shop-stuff {
   article {
     margin: 1rem 0;
@@ -179,61 +189,6 @@
       margin-top: 0.4rem;
       margin-bottom: 1.8rem;
     }
-}
-
-
-/*
-.home {
-  .second-column {
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-
-  }
-
-
-
-  .first-column{
-    margin-bottom: 2rem;
-  }
-
-  .second-post {
-
-    overflow: hidden;
-
-  }
-
-  .third-post {
-    flex-basis: 50%;
-    padding: 0.9rem 0.9375rem 0 0;
-  }
-
-  .fourth-post {
-    flex-basis: 50%;
-    padding: 0.9rem 0 0 0.9375rem;
-  }
-
-
-}
-
-.adventure-section {
-  position: relative;
-
-  img {
-    filter: brightness(70%);
-  }
-
-  .read-article {
-    position: absolute;
-    top: 0 ;
-    left: 0 ;
-  }
-} */
-
-.home {
-  .columns {
-    margin-bottom: 1em;
-  }
 }
 
 .adventure-section-home {
@@ -256,6 +211,38 @@
         left: -9999px;
         right: -9999px;
         margin: auto;
+      }
+
+      h2 {
+        @media only screen and (min-width: $medium) {
+          font-size: 1.3em;
+        }
+        @media only screen and (min-width: $large) {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+
+  .post-three, .post-four {
+    .white-button {
+      padding: 0.8rem 1rem;
+      @media only screen and (min-width: $medium) {
+        font-size: 0.8em;
+        padding: 0.5rem 0.5rem;
+      }
+      @media only screen and (min-width: $large) {
+        font-size: 1em;
+        padding: 0.8rem 1.4rem;
+      }
+    }
+    h2 {
+      font-size: 1em;
+      @media only screen and (min-width: $medium) {
+        font-size: 0.82em;
+      }
+      @media only screen and (min-width: $large) {
+        font-size: 1.5em;
       }
     }
   }

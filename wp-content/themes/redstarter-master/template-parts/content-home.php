@@ -15,7 +15,7 @@
     if (!empty($categories)){
         foreach ($categories as $cat) {
             // print_r($cat);
-            echo '<article id="post-'. get_the_ID(). '" class="small-6 medium-4 large-3 '.(($cat_count == 4)? "hide-for-medium-only" : "").' columns shop-cats '. get_post_class().'">';
+            echo '<article id="post-'. get_the_ID(). '" class="small-12 medium-4 large-3 '.(($cat_count == 4)? "hide-for-medium-only" : "").' columns shop-cats '. get_post_class().'">';
             echo '<div class="grey-border flex">'; // add a class and closing div
             echo "<img src='".get_bloginfo('stylesheet_directory')."/images/product-type-icons/".$cat->slug.".svg'>";
             echo "<p class='product-description center-text'>". $cat->description. "</p>";
@@ -45,7 +45,7 @@
     </header><!-- .entry-header -->
 
     <div class="entry-meta grey-border">
-        <?php red_starter_posted_on(); ?> <?php if (get_comments_number() != 0){ echo "/"; comments_number( '0 Comments', '1 Comment', '% Comments' ); } ?>
+        <?php red_starter_posted_on(); ?> <?php if (get_comments_number() != 0){ echo "/ "; comments_number( '0 Comments', '1 Comment', '% Comments' ); } ?>
 
         <?php echo ( get_the_title() ? the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ) : "<a href=".get_permalink()." rel='bookmark'><h3>No title available</h3></a>"); ?>
 
