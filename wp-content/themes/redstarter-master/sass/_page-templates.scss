@@ -157,26 +157,24 @@
     }
 }
 
+
+/*
 .home {
   .second-column {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 2rem;
-    position: relative;
+
   }
 
-  .second-column:after {
-    content: "";
-    display: block;
-    padding-bottom: 50%;
-  }
+
 
   .first-column{
     margin-bottom: 2rem;
   }
 
   .second-post {
-    height: 50%;
+
     overflow: hidden;
 
   }
@@ -206,7 +204,55 @@
     top: 0 ;
     left: 0 ;
   }
+} */
+
+.home {
+  .columns {
+    margin-bottom: 1em;
+  }
 }
+
+.adventure-section-home {
+  article {
+    width: 100%;
+    position: relative;
+  }
+
+  .post-two {
+    margin-bottom: .9375rem;
+
+    article {
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+        right: -9999px;
+        margin: auto;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    filter: brightness(70%);
+  }
+
+  .read-article {
+    position: absolute;
+    top: 0 ;
+    left: 0 ;
+    padding: 0 1em 1em;
+
+    a {
+      font-weight: bold;
+    }
+  }
+}
+
 
 /* Adventures Archive */
 .post-type-archive-adventure {

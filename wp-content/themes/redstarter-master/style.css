@@ -863,44 +863,84 @@ object {
     margin-top: 0.4rem;
     margin-bottom: 1.8rem; }
 
-.home .second-column {
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  margin-bottom: 2rem;
-  position: relative; }
+/*
+.home {
+  .second-column {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 
-.home .second-column:after {
-  content: "";
-  display: block;
-  padding-bottom: 50%; }
+  }
 
-.home .first-column {
-  margin-bottom: 2rem; }
 
-.home .second-post {
-  height: 50%;
-  overflow: hidden; }
 
-.home .third-post {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  padding: 0.9rem 0.9375rem 0 0; }
+  .first-column{
+    margin-bottom: 2rem;
+  }
 
-.home .fourth-post {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  padding: 0.9rem 0 0 0.9375rem; }
+  .second-post {
+
+    overflow: hidden;
+
+  }
+
+  .third-post {
+    flex-basis: 50%;
+    padding: 0.9rem 0.9375rem 0 0;
+  }
+
+  .fourth-post {
+    flex-basis: 50%;
+    padding: 0.9rem 0 0 0.9375rem;
+  }
+
+
+}
 
 .adventure-section {
-  position: relative; }
-  .adventure-section img {
-    filter: brightness(70%); }
-  .adventure-section .read-article {
+  position: relative;
+
+  img {
+    filter: brightness(70%);
+  }
+
+  .read-article {
     position: absolute;
-    top: 0;
-    left: 0; }
+    top: 0 ;
+    left: 0 ;
+  }
+} */
+.home .columns {
+  margin-bottom: 1em; }
+
+.adventure-section-home article {
+  width: 100%;
+  position: relative; }
+
+.adventure-section-home .post-two {
+  margin-bottom: .9375rem; }
+  .adventure-section-home .post-two article {
+    height: 100%;
+    overflow: hidden; }
+    .adventure-section-home .post-two article img {
+      position: absolute;
+      top: -9999px;
+      bottom: -9999px;
+      left: -9999px;
+      right: -9999px;
+      margin: auto; }
+
+.adventure-section-home img {
+  width: 100%;
+  filter: brightness(70%); }
+
+.adventure-section-home .read-article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 1em 1em; }
+  .adventure-section-home .read-article a {
+    font-weight: bold; }
 
 /* Adventures Archive */
 .post-type-archive-adventure .site-main {
