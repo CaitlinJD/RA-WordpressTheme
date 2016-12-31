@@ -59,22 +59,20 @@ jQuery(document).ready(function($){
     })
 
     // Adventure image height
+        function resizeImage () {
+            var image = $('.post-two');
+            var width = image.width();
+            var height = width / 2;
 
-    function resizeImage () {
-        var image = $('.post-two');
-        var width = image.width();
-        var height = width / 2;
+            image.css('height', height);
+        }
 
-        image.css('height', height);
-    }
-
-    // Set initial image size
-    resizeImage();
-
-    // Change image size as screen size changes
-    $( window ).resize(function() {
+        // Set initial image size
         resizeImage();
-    });
 
+        // Change image size as screen size changes
+        $( window ).resize(function() {
+            resizeImage();
+        });
 
 })

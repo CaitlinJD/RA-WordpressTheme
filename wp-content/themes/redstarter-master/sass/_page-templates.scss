@@ -284,6 +284,9 @@
 
 .post-type-archive-journal, .single-journal {
 
+  .content-area {
+    padding-top: 2.5rem;
+  }
   .entry-header {
     position: relative;
     color: #fff;
@@ -368,12 +371,40 @@ dl {
 .widget-area {
   padding: 1rem 0 1rem 1rem;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: $medium) {
     padding-left: 2rem;
   }
 
-  .textwidget p {
-    margin-bottom: 0;
+  .textwidget {
+      display: flex;
+      flex-wrap: wrap;
+
+    @media only screen and (min-width: $medium) {
+      display: block;
+    }
+    p {
+      margin-bottom: 0;
+      margin-right: 1.5em;
+      @media only screen and (min-width: $medium) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .widget {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      @media only screen and (min-width: $medium) {
+        display: block;
+      }
+      li {
+        margin-right: 1.5em;
+        @media only screen and (min-width: $medium) {
+          margin-right: 0;
+        }
+      }
+    }
   }
 
 }
