@@ -1079,6 +1079,7 @@ dl {
   border: 1px solid black;
   text-decoration: none;
   margin-right: 5px;
+  margin-bottom: 0.5em;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -1096,7 +1097,11 @@ dl {
 
 .crunchify-social {
   margin: 3rem 0 2rem 0;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .crunchify-social a {
     color: #000; }
     .crunchify-social a:hover {
