@@ -957,8 +957,17 @@ object {
 
 .post-type-archive-adventure .adventure-section {
   margin-bottom: 2rem; }
-  .post-type-archive-adventure .adventure-section .read-article {
-    padding: 4rem 2rem; }
+
+.post-type-archive-adventure article {
+  position: relative; }
+  .post-type-archive-adventure article img {
+    filter: brightness(70%); }
+
+.post-type-archive-adventure .read-article {
+  padding: 2rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 /* Journal posts */
 .post-type-archive-journal .content-area, .single-journal .content-area {

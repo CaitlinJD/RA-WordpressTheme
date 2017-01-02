@@ -273,11 +273,23 @@
   }
   .adventure-section {
     margin-bottom: 2rem;
+  }
 
-    .read-article {
-      padding: 4rem 2rem;
+  article {
+    position: relative;
+
+    img {
+      filter: brightness(70%);
     }
   }
+
+  .read-article {
+    padding: 2rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
 }
 
 /* Journal posts */
